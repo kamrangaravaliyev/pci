@@ -1,0 +1,889 @@
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+
+button {
+  cursor: pointer
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(242, 242, 247);
+}
+
+.all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 496px;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.form-content {
+  background-color: white;
+  border-radius: 10px;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #EBEDF2;
+  box-shadow: 0px 1px 2px 0px #00000005;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.brand{
+  height: 213px;
+  width: 100%;
+  background-image: url('/abb_default/img/first-bg.svg');
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  justify-content: start;
+  padding: 28px 0;
+}
+
+.brand img{
+  width: 10rem;
+}
+
+.header-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.header-detail h1{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-detail p {
+  color: #757575;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+.amount-box{
+  width: 198px;
+  height: 80px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: translateY(-40px);
+  box-shadow: 0px 8px 24px 0px #0000000D;
+
+}
+
+
+.amount-title{
+  color: #757575;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.amount-pay{
+  color: #0D0D19;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url('/abb_default/img/background.svg') no-repeat center;
+  align-items: center;
+  padding: 0 0 35px 0;
+  justify-content: center;
+  
+}
+
+.cart-information{
+  width: 343px;
+  border-radius: 20px;
+  height: 212px;
+
+  
+}
+
+
+.form{
+  display: flex;
+}
+
+.form-input{
+  padding: 9px 15px;
+}
+
+.card-information-title{
+  font-size: 18px;
+  padding: 10px 0;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+
+section h1 {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 29px;
+}
+
+label {
+  display: block;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  transform: translate(17px, 25px);
+  color: #FCFCFCFC;
+}
+
+
+.footer_1,
+.footer_2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  align-items: center;
+}
+
+
+/* form style */
+
+input:focus {
+  outline: none;
+}
+
+
+
+/* curd number  */
+
+.field-container #cardnumber {
+  width: 100%;
+}
+
+
+input {
+  width: 100%;
+  height: 58px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(242, 242, 242, 0.06);
+  padding: 20px 16px 0 16px;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+}
+
+
+
+
+.date-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
+  /* margin-bottom: 40px; */
+}
+
+.date-field .field-container {
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 12px;
+  height: 56px;
+}
+
+.date-field .field-container_cvc {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  height: 56px;
+}
+
+
+.date-field .field-container_cvc {
+  position: relative;
+}
+
+.date-field #expirationdate {
+  font-size: 16px;
+}
+
+.date-field .field-container_cvc ::placeholder {
+  position: absolute;
+}
+
+.date-field .field-container_cvc .field_cvc {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.date-field .field-container_cvc .field_cvc input {
+  font-size: 14px;
+}
+
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+
+  width: 191px;
+  background-color: #131311;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  font-family: Inter;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  bottom: 23px;
+  right: -15px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #131311;
+  position: absolute;
+  right: 15px;
+  bottom: -10px;
+}
+
+.field-container .field_cvc {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.field-container .field_cvc p {
+  text-decoration: none;
+  font-family: Inter;
+  color: rgb(32, 88, 187);
+}
+
+.date-field .field_cvc ::placeholder {
+  color: #ADADAD;
+  font-size: 16px;
+}
+
+.field-container_date ::placeholder {
+  color: #ADADAD;
+  font-size: 16px;
+}
+
+/* svg */
+
+.number-field {
+  width: 100%;
+  position: relative;
+}
+
+.number-field ::placeholder {
+  color: #ADADAD;
+  font-size: 16px;
+  letter-spacing: 1px
+}
+
+.number-field svg {
+  max-height: 50px;
+  width: 33px;
+  position: absolute;
+  right: 12px;
+  top: 1.4px;
+  /* border-top-left-radius: 50%; */
+}
+
+/* buttton */
+
+.form-button {
+  /* margin-top: 40px; */
+  margin-top: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-button button {
+  padding: 16px 0px;
+  border-radius: 12px;
+  border: none;
+}
+
+.form-button .submitBtn {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  border-radius: 12px;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  top: 3px;
+  background: none;
+  font-size: 18px;
+}
+
+.submitBtn:enabled {
+  background-color: #2250D1;
+  color: white;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  background-color: #E0E0E0;
+  color: #ADADAD;
+  cursor: not-allowed;
+}
+
+.form-button .submitBtn img {
+  color: white;
+  position: relative;
+  top: 3px;
+}
+
+/* .form-button .submitBtn .submitWrd {
+  font-weight: 500;
+  color: white;
+  position: relative;
+  top: 3px;
+  background: none;
+  font-size: 18px;
+} */
+
+
+.form-button #cnltBtn {
+  /* color: rgb(32, 88, 187) */
+  font-weight: 600;
+  background-color: rgb(242, 242, 247);
+  font-family: Inter;
+  font-size: 18px;
+}
+
+/* 
+.form-button #cnltBtn p {
+
+} */
+
+
+/* part2  */
+.field-container3 {
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+
+.field-container3 input {
+  font-size: 18px;
+}
+
+.cardNameBox,
+.cardMobileBox {
+  padding: 6px 12px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid rgb(206, 206, 207);
+  border-radius: 12px;
+  height: 56px;
+}
+
+
+.azericard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 30px 0;
+  gap: 6px;
+}
+
+.azericard img{
+  height: 19px;
+}
+
+.azericard span {
+  color: #ADADAD;
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+}
+
+/* 
+.footer_part2 {
+  margin-top: 72px;
+} */
+
+
+/* ///////////////////////////// */
+
+/* payment is successfull */
+
+
+.success_content {
+  padding: 48px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 32px 0;
+}
+
+.success_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+}
+
+.success_img p {
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
+}
+
+.payment_info {
+  margin: 40px 0;
+}
+
+.payment_info .row {
+  display: flex;
+  /* width: 100%; */
+  /* height: 30px; */
+  flex-direction: column;
+}
+
+.payment_info .col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  /* flex: 1; */
+  height: 44px;
+  /* Dörtgenin yüksekliği */
+  border: 1px solid #F2F2F7;
+  /* Dörtgenin kenarlık rengi */
+  box-sizing: border-box;
+  /* Kenarlık dahil kutu modeli hesaplama */
+}
+
+.payment_info .row .col:nth-child(1) {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.payment_info .row .col:nth-child(5) {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.payment_info .col p:nth-child(1) {
+  font-size: 14px;
+  font-family: Inter;
+  color: rgba(0, 0, 0, 0.64);
+}
+
+.payment_info .col p:nth-child(2) {
+  font-size: 14px;
+  font-family: Inter;
+  color: #0D0D19;
+  font-weight: 500;
+}
+
+.form-button .printBtn {
+  border: 1px solid #2058BB;
+  background-color: #2058BB;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.form-button .back_home {
+  color: #0D0D19;
+  border: 1px solid #F0F0F0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* ///////////////////////////// */
+
+/* payment was not successfull */
+
+.not_success {
+  margin-top: 24px;
+  padding: 0 24px;
+}
+
+.not_success p:nth-child(1) {
+  font-size: 22px;
+  font-family: Inter;
+  font-weight: 600;
+  text-align: center;
+}
+
+.not_success_p2 {
+  text-align: center;
+  color: #646466;
+  font-family: Inter;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* ///////////////////////////// */
+
+/* DUPLICATE */
+
+
+.success_content .success_img .duplicate_message {
+  text-align: center;
+  padding: 0 25px;
+}
+
+
+/* ///////////////////////////// */
+
+/* Verify */
+
+.verify_content {
+  background-color: white;
+  padding: 48px;
+  border-radius: 20px;
+}
+
+.verify_text p:nth-child(1) {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.verify_text p:nth-child(2) {
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: Inter;
+  color: rgba(0, 0, 0, 0.64);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.verify_otp {
+  padding: 6px 12px;
+
+
+  border: 1px solid rgb(206, 206, 207);
+  border-radius: 12px;
+  height: 56px;
+}
+
+.verify_resend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 24px;
+}
+
+.verify_resend p {
+  font-size: 18px;
+  font-family: Inter;
+  color: rgba(0, 0, 0, 0.64);
+}
+
+.verify_resend a {
+  font-size: 18px;
+  font-family: Inter;
+  color: #2058BB;
+  cursor: pointer;
+}
+
+
+/* /////////////// */
+.inputGroup {
+
+  font-family: 'Segoe UI', sans-serif;
+  padding: 16px 12px;
+  position: relative;
+  border: 1px solid rgb(206, 206, 207);
+  border-radius: 12px;
+}
+
+.inputGroup input {
+  font-size: 18px;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+  top: 6px;
+}
+
+.inputGroup label {
+  font-size: 18px;
+  position: absolute;
+  top: 5px;
+  left: -12px;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgba(0, 0, 0, 0.64);
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+  font-size: 14px;
+  position: absolute;
+  top: -10px;
+  left: -6px;
+}
+
+
+/* loading */
+
+
+
+.loading_page {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.72);
+}
+
+.azericard_loading {
+  padding: 48px;
+  width: 600px;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+}
+
+.loading_words p:nth-child(1) {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0D0D19;
+  margin-bottom: 16px;
+}
+
+
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #2058BB transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Responsible design */
+
+
+@media (max-width:767px) {
+
+
+  .all{
+    width: 100%;
+    height: 100%;
+  }
+
+
+  
+
+  .header {
+    /* display: none; */
+    justify-content: center;
+  }
+
+  header .abb-logo {
+    display: none;
+  }
+
+  header .card-call {
+    display: contents;
+    justify-content: space-between;
+  }
+
+  header .card-call .abb-logo-mobile img {
+    display: block;
+    width: 89px;
+    height: 40px;
+  }
+
+  header .card-call div:nth-child(2) img {
+    width: 129px;
+    height: 24px;
+    margin: 0 10px;
+  }
+
+  footer {
+    margin: 0 16px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .footer_1 {
+    gap: 25px;
+  }
+
+  /* loading */
+
+  .azericard_loading {
+    margin: 0 15px;
+  }
+
+  /* verify email */
+
+  .success_content {
+    padding: 48px 20px;
+  }
+
+  /* tranform */
+
+
+
+  /* .date-field {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .date-field .field-container,
+  .field-container_cvc {
+    width: 100%;
+  }
+
+  .date-field .field-container_cvc .field_cvc {
+    width: 100%;
+  }
+
+  .date-field .field-container_cvc .field_cvc input {
+    padding: 0;
+    min-height: 28px;
+  } */
+}
+
+
+@media (min-width:768px) {
+
+  .header {
+    display: flex;
+  }
+
+
+
+  header .card-call .abb-logo-mobile img {
+    display: none;
+    width: 89px;
+    height: 40px;
+  }
+
+  .duplicate_img {
+    display: none;
+  }
+}
+
+@media print {
+  .footer_part2 {
+    margin: 0;
+  }
+}
