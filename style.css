@@ -129,9 +129,8 @@ body {
   flex-direction: column;
   background: url('/abb_default/img/background.svg') no-repeat center;
   align-items: center;
-  padding: 0 0 35px 0;
   justify-content: center;
-  
+  margin-bottom: 36px;
 }
 
 .cart-information{
@@ -147,15 +146,12 @@ body {
   display: flex;
 }
 
-.form-input{
-  padding: 9px 15px;
-}
-
 .card-information-title{
   font-size: 18px;
   padding: 10px 0;
   font-weight: 400;
   color: #FFFFFF;
+  display: none;
 }
 
 
@@ -206,7 +202,7 @@ input {
   border: 1px solid rgba(242, 242, 242, 0.06);
   padding: 20px 16px 0 16px;
   border-radius: 12px;
-  color: white;
+  color: black;
   font-size: 16px;
 }
 
@@ -451,8 +447,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
-  padding: 30px 0;
+  padding: 20px 0 20px 0;
   gap: 6px;
 }
 
@@ -799,6 +794,7 @@ input {
   }
 
   header .card-call {
+    background-color: red;
     display: contents;
     justify-content: space-between;
   }
